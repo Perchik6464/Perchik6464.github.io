@@ -57,8 +57,105 @@
 .header_logo{
     min-height: 24px;
     min-width: 120px;
+    z-index: 5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header_logo h1{
+    color: var(--White, #FFF);
+    font-size: 20px;
+    line-height: 120%;
+    transition: all .3s ease 0s;
+
+}
+.logo_ellipse{
+    position: relative;
+    width: 30%;
+    transform: scale(-1, 1);
 }
 
+.logo_ellipse .ellipse_2{
+    position: absolute;
+    left: 12px;
+}
+
+@media (max-width:768px){
+body.lock{
+    overflow:hidden ;
+}
+.header_burger{
+    display: block;
+    position: relative;
+    width: 22px;
+    height: 12px;
+    z-index: 5;
+}
+.header_burger.active::before{
+    transform: rotate(45deg);
+    top:5px;
+    background-color: #191C1F;
+}
+.header_burger.active::after{
+    transform: rotate(-45deg);
+    bottom:5px;
+    background-color: #191C1F;
+}
+.header_burger::before,
+.header_burger::after{
+    content: '';
+    position: absolute;
+    background-color: #FFF;
+    width: 100%;
+    height: 2px;
+    left:0;
+    transition: all .3s ease 0s;
+}
+.header_burger::before{
+    top:0;
+}
+.header_burger::after{
+    bottom:0;
+}
+.header.active{
+    position: fixed;
+}
+.header_menu{
+    overflow: auto;
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #FFF;
+    transition: all .3s ease 0s;
+    padding: 96px 16px 0px 16px !important;
+
+}
+.header_menu.active{
+    top: 0;
+}
+
+.menu_list .menu_link{
+    color:#83898F;
+}
+.header_menu .menu_list{
+    display: block;
+}
+.menu_item{
+    margin: 0px !important;
+    padding: 18px 0px;
+    border-top: 1px solid #ECEFF2;
+    
+}
+.menu_item:last-child{
+    border-bottom: 1px solid #ECEFF2;
+    
+}
+.header_logo h1.active{
+    color:#191C1F;
+}
+}
 .menu{
     padding: 5px 0;
 }
@@ -66,6 +163,7 @@
 .menu_list{
     flex-wrap:wrap ;
     display: flex;
+    
 }
 .menu_item:not(:first-child){
     margin: 0px 0px 0px 24px;
@@ -132,7 +230,7 @@
 .mainblock_body{
     padding: 313px 0px;
     position: relative;
-    z-index: 2;
+    z-index: 1;
 }
 .mainblock_filter{
     opacity: 0.2;
