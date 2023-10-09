@@ -213,7 +213,7 @@ body.lock{
     }
     }
 
-@media(max-width: 375px) {
+@media(max-width: 421px) {
     .mainblock_title{
         font-size: 24px;
         line-height: 133.333%;
