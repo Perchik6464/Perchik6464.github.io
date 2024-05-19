@@ -11,17 +11,48 @@
     <img src="assets/ico/gear-icon.svg" alt="Gear Icon" class="gear-icon">
   </button>
   <div id="sideBar" class="side-bar">
-    <!-- Поле для ввода -->
-    <div class="blockInput">
-      <label for="colorWell">Color:</label>
-      <input type="color" value="#ff0000" id="colorWell" />
-      <div class= 'dragon-input'contenteditable=true id="inputBox">
-        <code></code>
+
+
+
+
+    <div class="half">
+        <div class="tab">
+          <input id="tab-one" type="checkbox" name="tabs">
+          <label for="tab-one">Блоки</label>
+          <div class="tab-content">
+            <div class="blockInput">
+              <div class= 'dragon-input'contenteditable=true id="inputBox">
+                <code></code>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tab">
+          <input id="tab-two" type="checkbox" name="tabs">
+          <label for="tab-two">Картинки</label>
+          <div class="tab-content">
+            <div class="blockInput">
+              <img src="assets/img/Снимок экрана 2024-05-13 233804.png" alt="фото" class="dragon-img" id="imgBox">
+            </div>
+          </div>
+        </div>
+        <div class="tab">
+          <input id="tab-three" type="checkbox" name="tabs">
+          <label for="tab-three">Цвета</label>
+          <div class="tab-content">
+            <div class="blockInput">
+              <label for="colorWell">Цвет текста в блоках   </label>
+              <input type="color" value="#ff0000" id="colorWell" />
+            </div>
+            <div class="blockInput">
+              <label for="bgColorWell">Цвет фона блоков:</label>
+<input type="color" value="#ff0000" id="bgColorWell" />
+            </div>
+          </div>
+        </div>
       </div>
-      <img src="assets/img/Снимок экрана 2024-05-13 233804.png" alt="фото" class="dragon-img" id="imgBox">
     </div>
   </div>
   <script src="script/script.js"></script>
-  <script src="script/web_script.js"></script>
 </body>
 </html>
